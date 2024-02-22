@@ -78,6 +78,7 @@ height: 100vh;
 img{
     position: absolute;
     left: 00px;
+    width: 27%;
 }
 .botaozaoinsano{
     border: none;
