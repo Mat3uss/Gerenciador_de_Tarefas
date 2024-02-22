@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/icon barra.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Love+Ya+Like+A+Sister&family=Luckiest+Guy&family=M+PLUS+1+Code&family=Magra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/pagina_tarefas.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Criar Tarefa</title>
 </head>
 <body>
-    <link rel="stylesheet" href="/css/pagina_tarefas.css">
+        <div class="centrocadastro">
+            <img src="/img/Tarefas__1_-removebg-preview 1.png" alt="" class="imagemtarefa">
+            <p class="texto2">CRIAR TAREFA</p>
+            <p class="texto3">INSIRA AQUI OS DADOS:</p>
+            <form class="divisaocadastrocampos">
+                <input id="nomeTarefa" type="text" placeholder="Digite o nome da tarefa">
+                <input id="dataExpiracao" type="date">
+            </form>
+            <button id="botaotarefa" class="botaotarefa">Adicionar Tarefa</button>
+            <a href="./tarefas.html"><button id="botaotarefa" class="botaotarefa">Visualizar Tarefas</button></a>
+            <p class="textobotao">
+                <a href="./login.html"> VOLTAR PARA O LOGIN</a>
+            </p>
+        </div>
+    <script src="/js/tarefas.js"></script>
 </body>
 </html>
