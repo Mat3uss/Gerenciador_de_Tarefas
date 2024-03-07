@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/pagina_tarefas.css">
     <link rel="stylesheet" href="../css/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/criartarefa.js" defer></script>
     <title>Criar Tarefa</title>
 </head>
 <body>
@@ -17,14 +18,16 @@
             <p class="texto3">INSIRA AQUI OS DADOS:</p>
             <form class="divisaocadastrocampos">
                 <input id="nomeTarefa" type="text" placeholder="Digite o nome da tarefa">
+                <input id="descricaoTarefa" type="text" placeholder="Digite a descrição da tarefa">
                 <input id="dataExpiracao" type="date">
             </form>
-            <button id="botaotarefa" class="botaotarefa">Adicionar Tarefa</button>
+            <div>
+                <button id="botaotarefa" class="botaotarefa">Adicionar Tarefa</button>
             <a href="./tarefas.html"><button id="botaotarefa" class="botaotarefa">Visualizar Tarefas</button></a>
             <p class="textobotao">
                 <a href="../paginas/cadastro.html"> VOLTAR PARA O LOGIN</a>
+                </div>
             </p>
         </div>
-    <script src="/js/tarefas.js"></script>
 </body>
 </html>

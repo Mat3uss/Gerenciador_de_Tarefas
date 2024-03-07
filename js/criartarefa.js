@@ -1,26 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const botaoAdicionarTarefa = document.getElementById('botaoAdicionarTarefa');
-    const nomeTarefa = document.getElementById('nomeTarefa');
-    const dataExpiracao = document.getElementById('dataExpiracao');
-    const listaTarefas = document.getElementById('listaTarefas');
 
-    botaoAdicionarTarefa.addEventListener('click', function() {
-        if (nomeTarefa.value && dataExpiracao.value) {
-            const tarefa = {
-                nome: nomeTarefa.value,
-                dataExpiracao: dataExpiracao.value
-            };
 
-            adicionarTarefa(tarefa);
+const button = document.getElementById('botaotarefas')
+function CriarTarefa(){
+    const containerTarefa = document.createElement('div');
+    containerTarefa.classList.add("container")
+    const tituloTarefa = document.createElement('h1')
+    tituloTarefa.classList.add("tarefa-title")
+    const descricaoTarefa = document.createElement('p')
+    descricaoTarefa.classList.add('tarefa-descricao')
 
-            nomeTarefa.value = '';
-            dataExpiracao.value = '';
-        }
-    });
+    main.appendChild(containerTarefa)
+    containerTarefa.appendChild(tituloTarefa)
+    //containerTarefa.appendChild(tituloTarefa)
+    //containerTarefa.appendChild(tituloTarefa)
 
-    function adicionarTarefa(tarefa) {
-        const li = document.createElement('li');
-        li.innerHTML = `<strong>${tarefa.nome}</strong> - Expira em ${tarefa.dataExpiracao}`;
-        listaTarefas.appendChild(li);
+}
+
+async function validarLogin(){
+    const email = document.getElementById('email').value; 
+    const senha = document.getElementById('senha').value; 
+
+
+    if(email === '' || senha === '' ){
+        alert('Preencha os campos corretamente !!!')
+    } 
+
+    try{
+        const responseApi = await fetch('http://localhost:5080/usuario')
+        const listUsers = await responseApi.json();
+
+        listUsers.forEach((user) => {
+
+            console.log(user.email)
+            console.log(email)
+            if(email === user.email && senha === user.senha){
+                alert('Usuário Logado com Sucesso !!!');
+                window.location.href = '..tarefas.html';
+            }
+        })
+
+    } catch (error){
+        console.error(error);
     }
-});
+}

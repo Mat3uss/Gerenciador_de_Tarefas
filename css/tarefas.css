@@ -5,19 +5,24 @@ body {
     justify-content: center;
     margin: 0;
     height: 100vh;
-}
-
-.centrotarefas{
-    width: 1250px;
-    height: 100vh;
-    background-color: rgba(172, 238, 230, 1);
-    text-align: center;
-    border-radius: 50px;
     font-size: xx-large;
     font-family: 'M PLUS 1 Code', monospace;
 }
+
+.centrotarefas{
+    height: 90vh;
+    width: 70vw;
+    background-color: rgba(172, 238, 230, 1);
+    border-radius: 50px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    padding: 24px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
 .botaotarefa{
-    margin-top: 50px;
     padding: 24px 12px;
     border: none;
     background-color: rgba(106, 207, 183, 1);
@@ -44,4 +49,36 @@ body {
 .divisaocadastrocampos input,.divisaocadastrocampos input::placeholder{
     font-size: 1rem;
     
+}
+
+.tarefas{
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.tarefa{    
+    /* height: 100px; */
+    max-height: 100em;
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.tarefa h1 {
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.tarefa p {
+    font-size: 15px;
+    margin-left: 30px;
 }

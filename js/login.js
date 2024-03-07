@@ -16,18 +16,11 @@ async function validarLogin(){
             if(nome === user.email && senha === user.senha){
                 alert('Usuario Logado com Sucesso')
             }
-
         })
 
-
-        
-        
     }
 }
 
 Window.onload = () => {
     button.addEventListener('click', validarLogin)
-
-
-    // colocar no html o bagui q chama o js!!!!!!!
 }
